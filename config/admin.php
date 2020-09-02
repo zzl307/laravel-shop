@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => 'Dcat Admin',
+    'name' => '后台管理',
 
     /*
     |--------------------------------------------------------------------------
@@ -322,7 +322,7 @@ return [
     */
     'layout' => [
         // indigo, blue, blue-light, blue-dark, green
-        'color' => 'indigo',
+        'color' => 'blue-light',
 
         'body_class' => '',
 
