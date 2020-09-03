@@ -49,6 +49,14 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection queue
      * @property Grid\Column|Collection email
      * @property Grid\Column|Collection token
+     * @property Grid\Column|Collection price
+     * @property Grid\Column|Collection product_id
+     * @property Grid\Column|Collection stock
+     * @property Grid\Column|Collection image
+     * @property Grid\Column|Collection on_sale
+     * @property Grid\Column|Collection rating
+     * @property Grid\Column|Collection review_count
+     * @property Grid\Column|Collection sold_count
      * @property Grid\Column|Collection address
      * @property Grid\Column|Collection city
      * @property Grid\Column|Collection contact_name
@@ -97,6 +105,14 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection queue(string $label = null)
      * @method Grid\Column|Collection email(string $label = null)
      * @method Grid\Column|Collection token(string $label = null)
+     * @method Grid\Column|Collection price(string $label = null)
+     * @method Grid\Column|Collection product_id(string $label = null)
+     * @method Grid\Column|Collection stock(string $label = null)
+     * @method Grid\Column|Collection image(string $label = null)
+     * @method Grid\Column|Collection on_sale(string $label = null)
+     * @method Grid\Column|Collection rating(string $label = null)
+     * @method Grid\Column|Collection review_count(string $label = null)
+     * @method Grid\Column|Collection sold_count(string $label = null)
      * @method Grid\Column|Collection address(string $label = null)
      * @method Grid\Column|Collection city(string $label = null)
      * @method Grid\Column|Collection contact_name(string $label = null)
@@ -150,6 +166,14 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection queue
      * @property Show\Field|Collection email
      * @property Show\Field|Collection token
+     * @property Show\Field|Collection price
+     * @property Show\Field|Collection product_id
+     * @property Show\Field|Collection stock
+     * @property Show\Field|Collection image
+     * @property Show\Field|Collection on_sale
+     * @property Show\Field|Collection rating
+     * @property Show\Field|Collection review_count
+     * @property Show\Field|Collection sold_count
      * @property Show\Field|Collection address
      * @property Show\Field|Collection city
      * @property Show\Field|Collection contact_name
@@ -198,6 +222,14 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection queue(string $label = null)
      * @method Show\Field|Collection email(string $label = null)
      * @method Show\Field|Collection token(string $label = null)
+     * @method Show\Field|Collection price(string $label = null)
+     * @method Show\Field|Collection product_id(string $label = null)
+     * @method Show\Field|Collection stock(string $label = null)
+     * @method Show\Field|Collection image(string $label = null)
+     * @method Show\Field|Collection on_sale(string $label = null)
+     * @method Show\Field|Collection rating(string $label = null)
+     * @method Show\Field|Collection review_count(string $label = null)
+     * @method Show\Field|Collection sold_count(string $label = null)
      * @method Show\Field|Collection address(string $label = null)
      * @method Show\Field|Collection city(string $label = null)
      * @method Show\Field|Collection contact_name(string $label = null)
