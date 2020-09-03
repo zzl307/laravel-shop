@@ -15,4 +15,8 @@ Route::group([
     $router->get('/', 'HomeController@index');
     $router->resource('users', 'UserController');
     $router->resource('products', 'ProductController');
+    $router->get('products/create', 'ProductController@create');
+    $router->post('products', 'ProductController@store');
+    $router->get('products/{id}/edit', 'ProductController@edit');
+    $router->put('products/{id}', 'ProductController@update');
 });

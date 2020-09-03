@@ -243,7 +243,7 @@ namespace Dcat\Admin {
     class Show {}
 
     /**
-     * @method \Dcat\Admin\Form\Field\Button button(...$params)
+     
      */
     class Form {}
 
