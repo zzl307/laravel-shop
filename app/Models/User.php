@@ -39,13 +39,21 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
+    protected function serializeDate(DateTimeInterface $date)
+    {
+        return $date->format('Y-m-d H:i:s');
+    }
+
     public function addresses()
     {
         return $this->hasMany(UserAddress::class);
     }
 
-    protected function serializeDate(DateTimeInterface $date)
+    public function favoriteProducts()
     {
-        return $date->format('Y-m-d H:i:s');
+        return $this->belongsToMany(Product::class, 'user_favorite_products')
+            ->withTimestamps()
+            ->orderBy('user_favorite_products.created_at', 'desc');
     }
+
 }
