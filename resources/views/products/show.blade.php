@@ -109,7 +109,10 @@
                     amount: $('.cart_amount input').val(),
                 })
                     .then(function() {
-                        swal('添加成功', '', 'success');
+                        swal('添加成功', '', 'success')
+                            .then(function() {
+                                location.href = '{{ route('cart.index') }}';
+                            });
                     }, function(error) {
                         if (error.response.status === 401) {
                             swal('请先登录', '', 'error');
