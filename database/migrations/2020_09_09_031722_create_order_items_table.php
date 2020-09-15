@@ -23,8 +23,8 @@ class CreateOrderItemsTable extends Migration
             $table->foreign('product_sku_id')->references('id')->on('product_skus')->onDelete('cascade');
             $table->unsignedBigInteger('amount');
             $table->decimal('price', 10, 2);
-            $table->unsignedBigInteger('rating');
-            $table->text('review');
+            $table->unsignedBigInteger('rating')->nullable();
+            $table->text('review')->nullable();
             $table->timestamp('reviewed_at')->nullable();
             $table->timestamps();
         });
