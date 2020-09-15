@@ -8,6 +8,7 @@ use App\Models\Order;
 use App\Models\UserAddress;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\OrderRequest;
+use App\Jobs\CloseOrder;
 use App\Models\ProductSku;
 
 class OrdersController extends Controller
@@ -56,6 +57,8 @@ class OrdersController extends Controller
 
             return $order;
         });
+
+        $this->dispatch(new CloseOrder($order, config('app.order_ttl')));
 
         return $order;
     }
