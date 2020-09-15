@@ -2,17 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use App\Exceptions\InvalidRequestException;
 use Carbon\Carbon;
 use App\Models\Order;
-use App\Models\UserAddress;
-use Illuminate\Support\Facades\DB;
-use App\Http\Requests\OrderRequest;
 use App\Jobs\CloseOrder;
 use App\Models\ProductSku;
+use App\Models\UserAddress;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Requests\OrderRequest;
+use App\Exceptions\InvalidRequestException;
 
 class OrdersController extends Controller
 {
+    public function index(Request $request)
+    {
+        $orders = Order::query()
+            ->with(['items.product', 'items.productSku'])
+            ->where('user_id', $request->user()->id)
+            ->orderBy('created_at', 'desc')
+            ->paginate();
+
+        return view('orders.index', ['orders' => $orders]);
+    }
+
     public function store(OrderRequest $request)
     {
         $user = $request->user();
